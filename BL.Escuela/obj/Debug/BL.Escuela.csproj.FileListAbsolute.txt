@@ -1,0 +1,5 @@
+C:\Users\antho\Desktop\kenny\BL.Escuela\bin\Debug\BL.Escuela.dll
+C:\Users\antho\Desktop\kenny\BL.Escuela\bin\Debug\BL.Escuela.pdb
+C:\Users\antho\Desktop\kenny\BL.Escuela\obj\Debug\BL.Escuela.csprojResolveAssemblyReference.cache
+C:\Users\antho\Desktop\kenny\BL.Escuela\obj\Debug\BL.Escuela.dll
+C:\Users\antho\Desktop\kenny\BL.Escuela\obj\Debug\BL.Escuela.pdb

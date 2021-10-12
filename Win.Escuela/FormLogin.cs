@@ -1,56 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BL.Escuela; // Librería Escuela
+using System;
 using System.Windows.Forms;
 
 namespace Win.Escuela
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _Seguridad; // Variable gobal
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _Seguridad = new SeguridadBL();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAcceder_Click(object sender, EventArgs e)
         {
             string usuario;
-            string contrasena;
-            string usuario1;
-            string contrasena1;
+            string contrasenia;
 
-            usuario = textBox1.Text;
-            contrasena = textBox2.Text;
-            usuario1 = textBox1.Text;
-            contrasena1 = textBox2.Text;
+            //Asignamos los valores de los TextBox.
+            usuario = textBoxUser.Text;
+            contrasenia = textBoxPass.Text;
 
-            if (usuario == "master" && contrasena == "123")
+            var resultado = _Seguridad.Autorizar(usuario, contrasenia);
+
+            if (resultado == true)
             {
                 this.Close();
             }
             else
             {
-                if (usuario1 == "estu" && contrasena1 == "456")
-                {
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario  o contraseña Invalido");
-                }
-              
+                MessageBox.Show("Usuario o contraseña incorrecta!");
             }
- 
-        }
-    }
+
+
+        } // Fin buttonAcceder_Click
+    } // Fin partial class FormLogin : Form.
 }
