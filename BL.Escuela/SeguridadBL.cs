@@ -8,21 +8,20 @@ namespace BL.Escuela
 {
     public class SeguridadBL
     {
-        public bool Autorizar(string usuario, string contrasenia)//Método / Función.
+       public bool Autorizar(string usuario, string contrasena, string usuario1, string contrasena1)
         {
-            if (usuario == "master" && contrasenia == "123")
+            if (usuario == "master" && contrasena == "123")
             {
                 return true;
             }
             else
             {
-                if (usuario == "estuden" && contrasenia == "456")
+                if (usuario1 == "estu" && contrasena1 == "456")
                 {
-                    return false;
+                    return true;
                 }
-
             }
-            return false;
+                return false;
         }
     }
 }

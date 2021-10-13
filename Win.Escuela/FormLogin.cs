@@ -1,4 +1,4 @@
-﻿using BL.Escuela; // Librería Escuela
+﻿using BL.Escuela;
 using System;
 using System.Windows.Forms;
 
@@ -6,31 +6,33 @@ namespace Win.Escuela
 {
     public partial class FormLogin : Form
     {
-        SeguridadBL _Seguridad; // Variable gobal
+        SeguridadBL _seguridad;
 
         public FormLogin()
         {
             InitializeComponent();
 
-            _Seguridad = new SeguridadBL();
-
+            _seguridad = new SeguridadBL();
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void buttonAcceder_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string usuario;
-            string contrasenia;
+            string contrasena;
+            string usuario1;
+            string contrasena1;
 
-            //Asignamos los valores de los TextBox.
-            usuario = textBoxUser.Text;
-            contrasenia = textBoxPass.Text;
+            usuario = textBox1.Text;
+            contrasena = textBox2.Text;
+            usuario1 = textBox1.Text;
+            contrasena1 = textBox2.Text;
 
-            var resultado = _Seguridad.Autorizar(usuario, contrasenia);
+            var resultado = _seguridad.Autorizar(usuario, contrasena, usuario1, contrasena1);
 
             if (resultado == true)
             {
@@ -38,10 +40,17 @@ namespace Win.Escuela
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta!");
+                if (resultado == true)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario  o contraseña Invalido");
+                }
+              
             }
-
-
-        } // Fin buttonAcceder_Click
-    } // Fin partial class FormLogin : Form.
+ 
+        }
+    }
 }
