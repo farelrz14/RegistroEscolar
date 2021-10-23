@@ -28,3 +28,7 @@ C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormMatri
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormMenu.resources
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.Properties.Resources.resources
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.csproj.GenerateResource.Cache
+C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\EntityFramework.dll
+C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\EntityFramework.xml
+C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\EntityFramework.SqlServer.xml
