@@ -16,7 +16,7 @@ namespace BL.Escuela
         public EstudiantesBL()
         {
             _contexto = new Contexto();
-            ListaEstudiantes = _contexto.Estudiantes.Local.ToBindingList();
+            //ListaEstudiantes = _contexto.Estudiantes.Local.ToBindingList();
             ListaEstudiantes = new BindingList<Estudiante>();
 
           
@@ -26,6 +26,7 @@ namespace BL.Escuela
         public BindingList<Estudiante> ObtenerEstudiantes()
         {
             _contexto.Estudiantes.Load();
+            ListaEstudiantes = _contexto.Estudiantes.Local.ToBindingList();
             return ListaEstudiantes;
         }
 
