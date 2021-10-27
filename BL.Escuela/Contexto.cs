@@ -24,6 +24,8 @@ namespace BL.Escuela
         public DbSet<Estudiante> Estudiantes { get; set; }
         public DbSet<Grado> Grados { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Maestro> Maestros { get; set; }
 
     }
+
 }

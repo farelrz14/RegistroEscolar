@@ -37,11 +37,11 @@ namespace Win.Escuela
             System.Windows.Forms.Label clasesLabel;
             System.Windows.Forms.Label correoLabel;
             System.Windows.Forms.Label edadLabel;
-            System.Windows.Forms.Label gradoLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label cedulaLabel;
             System.Windows.Forms.Label fotoLabel;
+            System.Windows.Forms.Label gradoIdLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEstudiante));
             this.listaEstudiantesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaEstudiantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -64,7 +64,6 @@ namespace Win.Escuela
             this.clasesTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.edadTextBox = new System.Windows.Forms.TextBox();
-            this.gradoTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
@@ -72,21 +71,24 @@ namespace Win.Escuela
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.listaGradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gradoIdComboBox = new System.Windows.Forms.ComboBox();
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             celularLabel = new System.Windows.Forms.Label();
             clasesLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             edadLabel = new System.Windows.Forms.Label();
-            gradoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
             fotoLabel = new System.Windows.Forms.Label();
+            gradoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingNavigator)).BeginInit();
             this.listaEstudiantesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaGradosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -149,16 +151,6 @@ namespace Win.Escuela
             edadLabel.TabIndex = 11;
             edadLabel.Text = "Edad:";
             // 
-            // gradoLabel
-            // 
-            gradoLabel.AutoSize = true;
-            gradoLabel.Location = new System.Drawing.Point(123, 447);
-            gradoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            gradoLabel.Name = "gradoLabel";
-            gradoLabel.Size = new System.Drawing.Size(52, 17);
-            gradoLabel.TabIndex = 13;
-            gradoLabel.Text = "Grado:";
-            // 
             // idLabel
             // 
             idLabel.AutoSize = true;
@@ -197,6 +189,15 @@ namespace Win.Escuela
             fotoLabel.Size = new System.Drawing.Size(0, 17);
             fotoLabel.TabIndex = 21;
             // 
+            // gradoIdLabel
+            // 
+            gradoIdLabel.AutoSize = true;
+            gradoIdLabel.Location = new System.Drawing.Point(123, 440);
+            gradoIdLabel.Name = "gradoIdLabel";
+            gradoIdLabel.Size = new System.Drawing.Size(48, 17);
+            gradoIdLabel.TabIndex = 25;
+            gradoIdLabel.Text = "Grado";
+            // 
             // listaEstudiantesBindingNavigator
             // 
             this.listaEstudiantesBindingNavigator.AddNewItem = null;
@@ -225,9 +226,10 @@ namespace Win.Escuela
             this.listaEstudiantesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEstudiantesBindingNavigator.Name = "listaEstudiantesBindingNavigator";
             this.listaEstudiantesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEstudiantesBindingNavigator.Size = new System.Drawing.Size(904, 27);
+            this.listaEstudiantesBindingNavigator.Size = new System.Drawing.Size(923, 27);
             this.listaEstudiantesBindingNavigator.TabIndex = 0;
             this.listaEstudiantesBindingNavigator.Text = "bindingNavigator1";
+            this.listaEstudiantesBindingNavigator.RefreshItems += new System.EventHandler(this.listaEstudiantesBindingNavigator_RefreshItems);
             // 
             // listaEstudiantesBindingSource
             // 
@@ -395,15 +397,6 @@ namespace Win.Escuela
             this.edadTextBox.Size = new System.Drawing.Size(408, 22);
             this.edadTextBox.TabIndex = 12;
             // 
-            // gradoTextBox
-            // 
-            this.gradoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Grado", true));
-            this.gradoTextBox.Location = new System.Drawing.Point(193, 443);
-            this.gradoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.gradoTextBox.Name = "gradoTextBox";
-            this.gradoTextBox.Size = new System.Drawing.Size(408, 22);
-            this.gradoTextBox.TabIndex = 14;
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Id", true));
@@ -467,12 +460,31 @@ namespace Win.Escuela
             // 
             this.openFileDialog1.Filter = " jpg, png | *.jpg; *.png";
             // 
+            // listaGradosBindingSource
+            // 
+            this.listaGradosBindingSource.DataSource = typeof(BL.Escuela.Grado);
+            // 
+            // gradoIdComboBox
+            // 
+            this.gradoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaEstudiantesBindingSource, "GradoId", true));
+            this.gradoIdComboBox.DataSource = this.listaGradosBindingSource;
+            this.gradoIdComboBox.DisplayMember = "Descripcion";
+            this.gradoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gradoIdComboBox.FormattingEnabled = true;
+            this.gradoIdComboBox.Location = new System.Drawing.Point(196, 440);
+            this.gradoIdComboBox.Name = "gradoIdComboBox";
+            this.gradoIdComboBox.Size = new System.Drawing.Size(404, 24);
+            this.gradoIdComboBox.TabIndex = 26;
+            this.gradoIdComboBox.ValueMember = "Id";
+            // 
             // FormEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(904, 562);
+            this.ClientSize = new System.Drawing.Size(923, 651);
+            this.Controls.Add(gradoIdLabel);
+            this.Controls.Add(this.gradoIdComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(fotoLabel);
@@ -491,8 +503,6 @@ namespace Win.Escuela
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(edadLabel);
             this.Controls.Add(this.edadTextBox);
-            this.Controls.Add(gradoLabel);
-            this.Controls.Add(this.gradoTextBox);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(nombreLabel);
@@ -506,6 +516,7 @@ namespace Win.Escuela
             this.listaEstudiantesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaGradosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,7 +546,6 @@ namespace Win.Escuela
         private System.Windows.Forms.TextBox clasesTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
         private System.Windows.Forms.TextBox edadTextBox;
-        private System.Windows.Forms.TextBox gradoTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
@@ -544,5 +554,7 @@ namespace Win.Escuela
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource listaGradosBindingSource;
+        private System.Windows.Forms.ComboBox gradoIdComboBox;
     }
 }

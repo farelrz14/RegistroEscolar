@@ -28,23 +28,23 @@ namespace BL.Escuela
             contexto.Grados.Add(grado1);
 
             var grado2 = new Grado();
-            grado1.Descripcion = "Segundo";
+            grado2.Descripcion = "Segundo";
             contexto.Grados.Add(grado2);
 
             var grado3 = new Grado();
-            grado1.Descripcion = "Tercero";
+            grado3.Descripcion = "Tercero";
             contexto.Grados.Add(grado3);
 
             var grado4 = new Grado();
-            grado1.Descripcion = "Cuarto";
+            grado4.Descripcion = "Cuarto";
             contexto.Grados.Add(grado4);
 
             var grado5 = new Grado();
-            grado1.Descripcion = "Quinto";
+            grado5.Descripcion = "Quinto";
             contexto.Grados.Add(grado5);
 
             var grado6 = new Grado();
-            grado1.Descripcion = "Sexto";
+            grado6.Descripcion = "Sexto";
             contexto.Grados.Add(grado6);
 
             base.Seed(contexto);

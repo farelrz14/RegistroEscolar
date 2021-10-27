@@ -27,8 +27,6 @@ namespace BL.Escuela
 
             return ListaGrados;
         }
-
-
     }
 
     public class Grado

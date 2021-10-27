@@ -30,6 +30,15 @@ namespace BL.Escuela
             return ListaEstudiantes;
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
         public Resultado GuardarEstudiante(Estudiante estudiante)
         {
             var resultado = Validar(estudiante);
@@ -94,11 +103,18 @@ namespace BL.Escuela
                 resultado.Mensaje = "Ingrese un correo valido";
                 resultado.Exitoso = false;
             }
-            // if (string.IsNullOrEmpty(estudiante.Grado) == true)
-            //{
-            // resultado.Mensaje = "Ingrese un Grado de primero hasta sexto";
+
+              if (string.IsNullOrEmpty(estudiante.GradoId) == true)
+            {
+            resultado.Mensaje = "Seleccione un Grado";
+            resultado.Exitoso = false;
+             }
+            //if (estudiante.GradoId == 0)
+            // {
+            // resultado.Mensaje = "Seleccione un Grado";
             // resultado.Exitoso = false;
             //  }
+
             if (estudiante.Edad <= 0)
             {
                 resultado.Mensaje = "La edad no debe ser menor que cero";

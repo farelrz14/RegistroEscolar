@@ -15,6 +15,7 @@ namespace Win.Escuela
     public partial class FormEstudiante : Form
     {
         EstudiantesBL _estudiantes;
+        GradosBL _gradosBL;
 
         public FormEstudiante()
         {
@@ -22,6 +23,9 @@ namespace Win.Escuela
 
             _estudiantes = new EstudiantesBL();
             listaEstudiantesBindingSource.DataSource = _estudiantes.ObtenerEstudiantes();
+
+            _gradosBL = new GradosBL();
+            listaGradosBindingSource.DataSource = _gradosBL.ObtenerGrados();
         }
 
         private void listaEstudiantesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -102,8 +106,9 @@ namespace Win.Escuela
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _estudiantes.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,6 +138,11 @@ namespace Win.Escuela
         private void button2_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
+        }
+
+        private void listaEstudiantesBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
         }
     }
 }
