@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,15 @@ namespace Win.Escuela
         {
             listaEstudiantesBindingSource.EndEdit();
             var estudiante = (Estudiante) listaEstudiantesBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                estudiante.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                estudiante.Foto = null;
+            }
 
             var resultado = _estudiantes.GuardarEstudiante(estudiante);
 
@@ -94,6 +104,35 @@ namespace Win.Escuela
         {
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var estudiante = (Estudiante)listaEstudiantesBindingSource.Current;
+
+            if (estudiante != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cree un registro antes de agregar una fotografia");
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
         }
     }
 }

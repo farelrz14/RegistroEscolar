@@ -41,6 +41,7 @@ namespace Win.Escuela
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label cedulaLabel;
+            System.Windows.Forms.Label fotoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEstudiante));
             this.listaEstudiantesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaEstudiantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,6 +68,10 @@ namespace Win.Escuela
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             celularLabel = new System.Windows.Forms.Label();
@@ -77,9 +82,11 @@ namespace Win.Escuela
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
+            fotoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingNavigator)).BeginInit();
             this.listaEstudiantesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -182,6 +189,14 @@ namespace Win.Escuela
             cedulaLabel.TabIndex = 19;
             cedulaLabel.Text = "Cedula:";
             // 
+            // fotoLabel
+            // 
+            fotoLabel.AutoSize = true;
+            fotoLabel.Location = new System.Drawing.Point(691, 181);
+            fotoLabel.Name = "fotoLabel";
+            fotoLabel.Size = new System.Drawing.Size(0, 17);
+            fotoLabel.TabIndex = 21;
+            // 
             // listaEstudiantesBindingNavigator
             // 
             this.listaEstudiantesBindingNavigator.AddNewItem = null;
@@ -210,7 +225,7 @@ namespace Win.Escuela
             this.listaEstudiantesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEstudiantesBindingNavigator.Name = "listaEstudiantesBindingNavigator";
             this.listaEstudiantesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEstudiantesBindingNavigator.Size = new System.Drawing.Size(877, 27);
+            this.listaEstudiantesBindingNavigator.Size = new System.Drawing.Size(904, 27);
             this.listaEstudiantesBindingNavigator.TabIndex = 0;
             this.listaEstudiantesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -329,7 +344,7 @@ namespace Win.Escuela
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaEstudiantesBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(193, 508);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(139, 30);
             this.activoCheckBox.TabIndex = 2;
@@ -339,7 +354,7 @@ namespace Win.Escuela
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Apellido", true));
             this.apellidoTextBox.Location = new System.Drawing.Point(193, 194);
-            this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apellidoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(408, 22);
             this.apellidoTextBox.TabIndex = 4;
@@ -348,7 +363,7 @@ namespace Win.Escuela
             // 
             this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Celular", true));
             this.celularTextBox.Location = new System.Drawing.Point(193, 288);
-            this.celularTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.celularTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.celularTextBox.Name = "celularTextBox";
             this.celularTextBox.Size = new System.Drawing.Size(408, 22);
             this.celularTextBox.TabIndex = 6;
@@ -357,7 +372,7 @@ namespace Win.Escuela
             // 
             this.clasesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Clases", true));
             this.clasesTextBox.Location = new System.Drawing.Point(193, 385);
-            this.clasesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clasesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.clasesTextBox.Name = "clasesTextBox";
             this.clasesTextBox.Size = new System.Drawing.Size(408, 22);
             this.clasesTextBox.TabIndex = 8;
@@ -366,7 +381,7 @@ namespace Win.Escuela
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Correo", true));
             this.correoTextBox.Location = new System.Drawing.Point(193, 331);
-            this.correoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.correoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(408, 22);
             this.correoTextBox.TabIndex = 10;
@@ -375,7 +390,7 @@ namespace Win.Escuela
             // 
             this.edadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Edad", true));
             this.edadTextBox.Location = new System.Drawing.Point(193, 242);
-            this.edadTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edadTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.edadTextBox.Name = "edadTextBox";
             this.edadTextBox.Size = new System.Drawing.Size(408, 22);
             this.edadTextBox.TabIndex = 12;
@@ -384,7 +399,7 @@ namespace Win.Escuela
             // 
             this.gradoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Grado", true));
             this.gradoTextBox.Location = new System.Drawing.Point(193, 443);
-            this.gradoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gradoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gradoTextBox.Name = "gradoTextBox";
             this.gradoTextBox.Size = new System.Drawing.Size(408, 22);
             this.gradoTextBox.TabIndex = 14;
@@ -393,7 +408,7 @@ namespace Win.Escuela
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(193, 68);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(408, 22);
@@ -403,7 +418,7 @@ namespace Win.Escuela
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(193, 149);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(408, 22);
             this.nombreTextBox.TabIndex = 18;
@@ -412,17 +427,56 @@ namespace Win.Escuela
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEstudiantesBindingSource, "Cedula", true));
             this.cedulaTextBox.Location = new System.Drawing.Point(193, 110);
-            this.cedulaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cedulaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(407, 22);
             this.cedulaTextBox.TabIndex = 20;
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BackColor = System.Drawing.Color.Silver;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaEstudiantesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(646, 95);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(224, 178);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 22;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(646, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 31);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Agregar Foto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(758, 292);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 31);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Remover Foto";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = " jpg, png | *.jpg; *.png";
             // 
             // FormEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(877, 562);
+            this.ClientSize = new System.Drawing.Size(904, 562);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(fotoLabel);
+            this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(cedulaLabel);
             this.Controls.Add(this.cedulaTextBox);
             this.Controls.Add(activoLabel);
@@ -444,13 +498,14 @@ namespace Win.Escuela
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.listaEstudiantesBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEstudiante";
             this.Text = "Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingNavigator)).EndInit();
             this.listaEstudiantesBindingNavigator.ResumeLayout(false);
             this.listaEstudiantesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEstudiantesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,5 +540,9 @@ namespace Win.Escuela
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.TextBox cedulaTextBox;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

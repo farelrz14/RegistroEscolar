@@ -32,25 +32,29 @@ namespace Win.Escuela
             usuario1 = textBox1.Text;
             contrasena1 = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando. . .";
+            Application.DoEvents();
+
             var resultado = _seguridad.Autorizar(usuario, contrasena, usuario1, contrasena1);
 
             if (resultado == true)
             {
                 this.Close();
             }
-            else
-            {
-                if (resultado == true)
-                {
-                    this.Close();
-                }
-                else
+          
+              else
                 {
                     MessageBox.Show("Usuario  o contraseña Invalido");
                 }
               
-            }
+            
  
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

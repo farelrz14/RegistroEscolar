@@ -94,11 +94,11 @@ namespace BL.Escuela
                 resultado.Mensaje = "Ingrese un correo valido";
                 resultado.Exitoso = false;
             }
-            if (string.IsNullOrEmpty(estudiante.Grado) == true)
-            {
-                resultado.Mensaje = "Ingrese un Grado de primero hasta sexto";
-                resultado.Exitoso = false;
-            }
+            // if (string.IsNullOrEmpty(estudiante.Grado) == true)
+            //{
+            // resultado.Mensaje = "Ingrese un Grado de primero hasta sexto";
+            // resultado.Exitoso = false;
+            //  }
             if (estudiante.Edad <= 0)
             {
                 resultado.Mensaje = "La edad no debe ser menor que cero";
@@ -123,8 +123,10 @@ namespace BL.Escuela
         public int Edad { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }
-        public string Grado { get; set; }
+        public string GradoId { get; set; }
+        public Grado Grado { get; set; }
         public int Clases { get; set; }
+        public byte[] Foto { get; set; }
         public bool Activo { get; set; }
 
     }
