@@ -6,6 +6,12 @@ namespace BL.Escuela
     {
         protected override void Seed(Contexto context)
         {
+            var usuarioMaster = new Usuario();
+            usuarioMaster.Nombre = "master";
+            usuarioMaster.Contrasena = "123";
+
+            context.Usuarios.Add(usuarioMaster);
+
             var grado1 = new Grado();
             grado1.Descripcion = "Primer Grado";
             context.Grados.Add(grado1);
