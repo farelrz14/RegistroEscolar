@@ -1,0 +1,10 @@
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\BL.Escuela.dll.config
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\BL.Escuela.dll
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\BL.Escuela.pdb
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\EntityFramework.dll
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\EntityFramework.xml
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\obj\Debug\BL.Escuela.csprojResolveAssemblyReference.cache
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\obj\Debug\BL.Escuela.dll
+C:\Users\antho\Source\ProyectoGrupal\BL.Escuela\obj\Debug\BL.Escuela.pdb
