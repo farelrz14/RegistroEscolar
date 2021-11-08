@@ -13,6 +13,7 @@ C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\Microsoft.AspNet.Iden
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.csprojResolveAssemblyReference.cache
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormEstudiante.resources
+C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormFactura.resources
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormLogin.resources
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormMaestro.resources
 C:\Users\antho\Source\ProyectoGrupal\Win.Escuela\obj\Debug\Win.Escuela.FormMatricula.resources
