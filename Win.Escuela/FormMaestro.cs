@@ -141,5 +141,21 @@ namespace Win.Escuela
         {
             fotoPictureBox.Image = null;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+            if (buscar != "")
+            {
+                listaMaestrosBindingSource.DataSource = _maestros.ObtenerMaestros(buscar);
+            }
+            else
+            {
+                listaMaestrosBindingSource.DataSource = _maestros.ObtenerMaestros();
+            }
+
+            listaMaestrosBindingSource.ResetBindings(false);
+        }
     }
 }

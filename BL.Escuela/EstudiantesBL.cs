@@ -27,6 +27,13 @@ namespace BL.Escuela
             return ListaEstudiantes;
         }
 
+        public BindingList<Estudiante> ObtenerEstudiantes(string buscar)
+        {
+            var resultado = _contexto.Estudiantes.Where(r => r.Nombre.Contains(buscar));
+
+            return new BindingList<Estudiante>(resultado.ToList());
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

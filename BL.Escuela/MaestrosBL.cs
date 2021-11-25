@@ -18,12 +18,20 @@ namespace BL.Escuela
             _contexto = new Contexto();
             ListaMaestros = new BindingList<Maestro>();
         }
+
         public BindingList<Maestro> ObtenerMaestros()
         {
             _contexto.Maestros.Load();
             ListaMaestros = _contexto.Maestros.Local.ToBindingList();
 
             return ListaMaestros;
+        }
+
+        public BindingList<Maestro> ObtenerMaestros(string buscar)
+        {
+            var resultado = _contexto.Maestros.Where(r => r.Nombre.Contains(buscar));
+
+            return new BindingList<Maestro>(resultado.ToList());
         }
 
         public void CancelarCambios()

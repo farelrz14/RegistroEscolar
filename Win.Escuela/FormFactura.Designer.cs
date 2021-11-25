@@ -95,63 +95,70 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(218, 62);
+            activoLabel.Location = new System.Drawing.Point(271, 87);
+            activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(52, 18);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
             // estudianteIdLabel
             // 
             estudianteIdLabel.AutoSize = true;
-            estudianteIdLabel.Location = new System.Drawing.Point(45, 127);
+            estudianteIdLabel.Location = new System.Drawing.Point(15, 181);
+            estudianteIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             estudianteIdLabel.Name = "estudianteIdLabel";
-            estudianteIdLabel.Size = new System.Drawing.Size(60, 13);
+            estudianteIdLabel.Size = new System.Drawing.Size(81, 18);
             estudianteIdLabel.TabIndex = 3;
             estudianteIdLabel.Text = "Estudiante:";
             // 
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(45, 96);
+            fechaLabel.Location = new System.Drawing.Point(15, 134);
+            fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
+            fechaLabel.Size = new System.Drawing.Size(53, 18);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(45, 60);
+            idLabel.Location = new System.Drawing.Point(15, 86);
+            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(23, 18);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
-            impuestoLabel.Location = new System.Drawing.Point(529, 411);
+            impuestoLabel.Location = new System.Drawing.Point(793, 569);
+            impuestoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(53, 13);
+            impuestoLabel.Size = new System.Drawing.Size(73, 18);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new System.Drawing.Point(529, 371);
+            subtotalLabel.Location = new System.Drawing.Point(793, 514);
+            subtotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(49, 13);
+            subtotalLabel.Size = new System.Drawing.Size(66, 18);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             // 
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(529, 449);
+            totalLabel.Location = new System.Drawing.Point(793, 622);
+            totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(34, 13);
+            totalLabel.Size = new System.Drawing.Size(45, 18);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -163,9 +170,11 @@
             // listaFacturasBindingNavigator
             // 
             this.listaFacturasBindingNavigator.AddNewItem = null;
+            this.listaFacturasBindingNavigator.BackColor = System.Drawing.Color.Turquoise;
             this.listaFacturasBindingNavigator.BindingSource = this.listaFacturasBindingSource;
             this.listaFacturasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaFacturasBindingNavigator.DeleteItem = null;
+            this.listaFacturasBindingNavigator.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listaFacturasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -187,7 +196,7 @@
             this.listaFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(735, 25);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(1102, 28);
             this.listaFacturasBindingNavigator.TabIndex = 0;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -204,7 +213,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -226,7 +235,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -302,56 +311,62 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(296, 57);
+            this.activoCheckBox.Location = new System.Drawing.Point(388, 80);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(27, 24);
+            this.activoCheckBox.Size = new System.Drawing.Size(40, 34);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(123, 92);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(128, 128);
+            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(298, 24);
             this.fechaDateTimePicker.TabIndex = 6;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
-            this.idTextBox.Location = new System.Drawing.Point(123, 57);
+            this.idTextBox.Location = new System.Drawing.Point(128, 80);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(75, 20);
+            this.idTextBox.Size = new System.Drawing.Size(111, 24);
             this.idTextBox.TabIndex = 8;
             // 
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.impuestoTextBox.Location = new System.Drawing.Point(588, 408);
+            this.impuestoTextBox.Location = new System.Drawing.Point(882, 565);
+            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
-            this.impuestoTextBox.Size = new System.Drawing.Size(134, 20);
+            this.impuestoTextBox.Size = new System.Drawing.Size(199, 24);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(588, 368);
+            this.subtotalTextBox.Location = new System.Drawing.Point(882, 510);
+            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
-            this.subtotalTextBox.Size = new System.Drawing.Size(134, 20);
+            this.subtotalTextBox.Size = new System.Drawing.Size(199, 24);
             this.subtotalTextBox.TabIndex = 12;
             this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(588, 446);
+            this.totalTextBox.Location = new System.Drawing.Point(882, 618);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(134, 20);
+            this.totalTextBox.Size = new System.Drawing.Size(199, 24);
             this.totalTextBox.TabIndex = 14;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -366,9 +381,10 @@
             this.estudianteIdComboBox.DisplayMember = "Nombre";
             this.estudianteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estudianteIdComboBox.FormattingEnabled = true;
-            this.estudianteIdComboBox.Location = new System.Drawing.Point(123, 124);
+            this.estudianteIdComboBox.Location = new System.Drawing.Point(128, 173);
+            this.estudianteIdComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.estudianteIdComboBox.Name = "estudianteIdComboBox";
-            this.estudianteIdComboBox.Size = new System.Drawing.Size(264, 21);
+            this.estudianteIdComboBox.Size = new System.Drawing.Size(394, 26);
             this.estudianteIdComboBox.TabIndex = 15;
             this.estudianteIdComboBox.ValueMember = "Id";
             // 
@@ -381,9 +397,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(615, 143);
+            this.button1.Location = new System.Drawing.Point(922, 198);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 30);
+            this.button1.Size = new System.Drawing.Size(63, 42);
             this.button1.TabIndex = 16;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
@@ -392,9 +409,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(672, 143);
+            this.button2.Location = new System.Drawing.Point(1008, 198);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 30);
+            this.button2.Size = new System.Drawing.Size(63, 42);
             this.button2.TabIndex = 17;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
@@ -412,9 +430,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(12, 179);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(18, 248);
+            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
-            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(710, 169);
+            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(1065, 234);
             this.facturaDetalleDataGridView.TabIndex = 17;
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError_1);
@@ -476,7 +495,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(561, 62);
+            this.label1.Location = new System.Drawing.Point(842, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 24);
             this.label1.TabIndex = 18;
@@ -485,10 +505,10 @@
             // 
             // FormFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(735, 486);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1102, 673);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.facturaDetalleDataGridView);
             this.Controls.Add(this.button2);
@@ -508,7 +528,10 @@
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.listaFacturasBindingNavigator);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormFactura";
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingSource)).EndInit();

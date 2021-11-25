@@ -148,5 +148,21 @@ namespace Win.Escuela
         {
             fotoPictureBox.Image = null;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+            if (buscar != "")
+            {
+                listaEstudiantesBindingSource.DataSource = _estudiantes.ObtenerEstudiantes(buscar);
+            }
+            else
+            {
+                listaEstudiantesBindingSource.DataSource = _estudiantes.ObtenerEstudiantes();
+            }
+
+            listaEstudiantesBindingSource.ResetBindings(false);
+        }
     }
 }

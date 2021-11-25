@@ -72,6 +72,8 @@
             this.listaGradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gradosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             activoLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
             celularLabel = new System.Windows.Forms.Label();
@@ -94,99 +96,111 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(44, 400);
+            activoLabel.Location = new System.Drawing.Point(37, 546);
+            activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(52, 18);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
             // cedulaLabel
             // 
             cedulaLabel.AutoSize = true;
-            cedulaLabel.Location = new System.Drawing.Point(44, 88);
+            cedulaLabel.Location = new System.Drawing.Point(37, 126);
+            cedulaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cedulaLabel.Name = "cedulaLabel";
-            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.Size = new System.Drawing.Size(58, 18);
             cedulaLabel.TabIndex = 5;
             cedulaLabel.Text = "Cedula:";
             // 
             // celularLabel
             // 
             celularLabel.AutoSize = true;
-            celularLabel.Location = new System.Drawing.Point(44, 201);
+            celularLabel.Location = new System.Drawing.Point(37, 282);
+            celularLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             celularLabel.Name = "celularLabel";
-            celularLabel.Size = new System.Drawing.Size(42, 13);
+            celularLabel.Size = new System.Drawing.Size(58, 18);
             celularLabel.TabIndex = 7;
             celularLabel.Text = "Celular:";
             // 
             // correoLabel
             // 
             correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(44, 244);
+            correoLabel.Location = new System.Drawing.Point(37, 334);
+            correoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.Size = new System.Drawing.Size(59, 18);
             correoLabel.TabIndex = 9;
             correoLabel.Text = "Correo:";
             // 
             // edadLabel
             // 
             edadLabel.AutoSize = true;
-            edadLabel.Location = new System.Drawing.Point(44, 163);
+            edadLabel.Location = new System.Drawing.Point(37, 230);
+            edadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             edadLabel.Name = "edadLabel";
-            edadLabel.Size = new System.Drawing.Size(35, 13);
+            edadLabel.Size = new System.Drawing.Size(46, 18);
             edadLabel.TabIndex = 11;
             edadLabel.Text = "Edad:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(44, 52);
+            idLabel.Location = new System.Drawing.Point(37, 74);
+            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(23, 18);
             idLabel.TabIndex = 13;
             idLabel.Text = "Id:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(44, 125);
+            nombreLabel.Location = new System.Drawing.Point(37, 178);
+            nombreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(66, 18);
             nombreLabel.TabIndex = 15;
             nombreLabel.Text = "Nombre:";
             // 
             // claseIdLabel
             // 
             claseIdLabel.AutoSize = true;
-            claseIdLabel.Location = new System.Drawing.Point(44, 316);
+            claseIdLabel.Location = new System.Drawing.Point(37, 440);
+            claseIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             claseIdLabel.Name = "claseIdLabel";
-            claseIdLabel.Size = new System.Drawing.Size(36, 13);
+            claseIdLabel.Size = new System.Drawing.Size(50, 18);
             claseIdLabel.TabIndex = 20;
             claseIdLabel.Text = "Clase:";
             // 
             // gradoIdLabel
             // 
             gradoIdLabel.AutoSize = true;
-            gradoIdLabel.Location = new System.Drawing.Point(40, 356);
+            gradoIdLabel.Location = new System.Drawing.Point(37, 494);
+            gradoIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gradoIdLabel.Name = "gradoIdLabel";
-            gradoIdLabel.Size = new System.Drawing.Size(39, 13);
+            gradoIdLabel.Size = new System.Drawing.Size(54, 18);
             gradoIdLabel.TabIndex = 22;
             gradoIdLabel.Text = "Grado:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(36, 280);
+            direccionLabel.Location = new System.Drawing.Point(37, 386);
+            direccionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.Size = new System.Drawing.Size(75, 18);
             direccionLabel.TabIndex = 23;
             direccionLabel.Text = "Direccion:";
             // 
             // listaMaestrosBindingNavigator
             // 
             this.listaMaestrosBindingNavigator.AddNewItem = null;
+            this.listaMaestrosBindingNavigator.BackColor = System.Drawing.Color.Turquoise;
             this.listaMaestrosBindingNavigator.BindingSource = this.listaMaestrosBindingSource;
             this.listaMaestrosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaMaestrosBindingNavigator.DeleteItem = null;
+            this.listaMaestrosBindingNavigator.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listaMaestrosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -207,8 +221,9 @@
             this.listaMaestrosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.listaMaestrosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaMaestrosBindingNavigator.Name = "listaMaestrosBindingNavigator";
+            this.listaMaestrosBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.listaMaestrosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaMaestrosBindingNavigator.Size = new System.Drawing.Size(735, 25);
+            this.listaMaestrosBindingNavigator.Size = new System.Drawing.Size(1102, 28);
             this.listaMaestrosBindingNavigator.TabIndex = 0;
             this.listaMaestrosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -219,7 +234,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(60, 25);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -229,7 +244,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -238,27 +253,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 28);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(73, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -266,7 +281,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -275,13 +290,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 28);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -289,7 +304,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -299,7 +314,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 25);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -308,7 +323,7 @@
             this.listaMaestrosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.listaMaestrosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaMaestrosBindingNavigatorSaveItem.Image")));
             this.listaMaestrosBindingNavigatorSaveItem.Name = "listaMaestrosBindingNavigatorSaveItem";
-            this.listaMaestrosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.listaMaestrosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 25);
             this.listaMaestrosBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaMaestrosBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaMaestrosBindingNavigatorSaveItem_Click);
             // 
@@ -318,7 +333,7 @@
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(90, 29);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
@@ -326,77 +341,91 @@
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaMaestrosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(97, 395);
+            this.activoCheckBox.Location = new System.Drawing.Point(128, 540);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(318, 24);
+            this.activoCheckBox.Size = new System.Drawing.Size(477, 33);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // cedulaTextBox
             // 
             this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Cedula", true));
-            this.cedulaTextBox.Location = new System.Drawing.Point(97, 85);
+            this.cedulaTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.cedulaTextBox.Location = new System.Drawing.Point(128, 120);
+            this.cedulaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cedulaTextBox.Name = "cedulaTextBox";
-            this.cedulaTextBox.Size = new System.Drawing.Size(318, 20);
+            this.cedulaTextBox.Size = new System.Drawing.Size(475, 24);
             this.cedulaTextBox.TabIndex = 6;
             // 
             // celularTextBox
             // 
             this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Celular", true));
-            this.celularTextBox.Location = new System.Drawing.Point(97, 198);
+            this.celularTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.celularTextBox.Location = new System.Drawing.Point(128, 276);
+            this.celularTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.celularTextBox.Name = "celularTextBox";
-            this.celularTextBox.Size = new System.Drawing.Size(318, 20);
+            this.celularTextBox.Size = new System.Drawing.Size(475, 24);
             this.celularTextBox.TabIndex = 8;
             // 
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(97, 241);
+            this.correoTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.correoTextBox.Location = new System.Drawing.Point(128, 328);
+            this.correoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(318, 20);
+            this.correoTextBox.Size = new System.Drawing.Size(475, 24);
             this.correoTextBox.TabIndex = 10;
             // 
             // edadTextBox
             // 
             this.edadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Edad", true));
-            this.edadTextBox.Location = new System.Drawing.Point(97, 160);
+            this.edadTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.edadTextBox.Location = new System.Drawing.Point(128, 224);
+            this.edadTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edadTextBox.Name = "edadTextBox";
-            this.edadTextBox.Size = new System.Drawing.Size(318, 20);
+            this.edadTextBox.Size = new System.Drawing.Size(475, 24);
             this.edadTextBox.TabIndex = 12;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(97, 49);
+            this.idTextBox.Location = new System.Drawing.Point(128, 68);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(318, 20);
+            this.idTextBox.Size = new System.Drawing.Size(475, 24);
             this.idTextBox.TabIndex = 14;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(97, 122);
+            this.nombreTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.nombreTextBox.Location = new System.Drawing.Point(128, 172);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(318, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(475, 24);
             this.nombreTextBox.TabIndex = 16;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaMaestrosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(508, 66);
+            this.fotoPictureBox.Location = new System.Drawing.Point(651, 120);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(178, 191);
+            this.fotoPictureBox.Size = new System.Drawing.Size(334, 264);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 18;
             this.fotoPictureBox.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(485, 263);
+            this.button1.Location = new System.Drawing.Point(651, 408);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 23);
+            this.button1.Size = new System.Drawing.Size(126, 32);
             this.button1.TabIndex = 19;
             this.button1.Text = "Agregar Foto";
             this.button1.UseVisualStyleBackColor = true;
@@ -404,9 +433,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(624, 263);
+            this.button2.Location = new System.Drawing.Point(860, 408);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.Size = new System.Drawing.Size(126, 32);
             this.button2.TabIndex = 20;
             this.button2.Text = "Remover Foto";
             this.button2.UseVisualStyleBackColor = true;
@@ -427,9 +457,10 @@
             this.claseIdComboBox.DisplayMember = "Descripcion";
             this.claseIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.claseIdComboBox.FormattingEnabled = true;
-            this.claseIdComboBox.Location = new System.Drawing.Point(98, 313);
+            this.claseIdComboBox.Location = new System.Drawing.Point(129, 432);
+            this.claseIdComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.claseIdComboBox.Name = "claseIdComboBox";
-            this.claseIdComboBox.Size = new System.Drawing.Size(317, 21);
+            this.claseIdComboBox.Size = new System.Drawing.Size(474, 26);
             this.claseIdComboBox.TabIndex = 21;
             this.claseIdComboBox.ValueMember = "Id";
             // 
@@ -440,9 +471,10 @@
             this.gradoIdComboBox.DisplayMember = "Descripcion";
             this.gradoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gradoIdComboBox.FormattingEnabled = true;
-            this.gradoIdComboBox.Location = new System.Drawing.Point(97, 353);
+            this.gradoIdComboBox.Location = new System.Drawing.Point(128, 486);
+            this.gradoIdComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gradoIdComboBox.Name = "gradoIdComboBox";
-            this.gradoIdComboBox.Size = new System.Drawing.Size(318, 21);
+            this.gradoIdComboBox.Size = new System.Drawing.Size(475, 26);
             this.gradoIdComboBox.TabIndex = 23;
             this.gradoIdComboBox.ValueMember = "Id";
             // 
@@ -458,16 +490,40 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaestrosBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(97, 277);
+            this.direccionTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.direccionTextBox.Location = new System.Drawing.Point(128, 380);
+            this.direccionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(317, 20);
+            this.direccionTextBox.Size = new System.Drawing.Size(474, 24);
             this.direccionTextBox.TabIndex = 24;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(873, 64);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 32);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox1.Location = new System.Drawing.Point(651, 70);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(211, 24);
+            this.textBox1.TabIndex = 31;
             // 
             // FormMaestro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 423);
+            this.ClientSize = new System.Drawing.Size(1102, 586);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(gradoIdLabel);
@@ -492,6 +548,8 @@
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.listaMaestrosBindingNavigator);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMaestro";
             this.Text = "Maestro";
             ((System.ComponentModel.ISupportInitialize)(this.listaMaestrosBindingNavigator)).EndInit();
@@ -541,5 +599,7 @@
         private System.Windows.Forms.BindingSource listaGradosBindingSource;
         private System.Windows.Forms.BindingSource gradosBLBindingSource;
         private System.Windows.Forms.TextBox direccionTextBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

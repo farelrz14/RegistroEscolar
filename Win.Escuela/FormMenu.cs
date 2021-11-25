@@ -26,6 +26,8 @@ namespace Win.Escuela
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
         }
 
         private void estudianteToolStripMenuItem_Click(object sender, EventArgs e)
